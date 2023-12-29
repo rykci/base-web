@@ -9,6 +9,7 @@ const CHAIN_ID_TO_NETWORK: Record<number, Network> = {
   8453: 'base',
   84531: 'base-goerli',
   84532: 'base-sepolia',
+  8598668088: 'swan-chain',
 };
 
 export function getL2NetworkForChainEnv() {

@@ -43,16 +43,16 @@ export function connectWallet(activeChainIds: number[]) {
     {
       groupName: 'Recommended',
       wallets: [
-        coinbaseWallet({
-          chains,
-          appName: 'Bridge',
-        }),
+        // coinbaseWallet({
+        //   chains,
+        //   appName: 'Bridge',
+        // }),
         injectedWallet({ chains }),
-        rainbowWallet({ chains, projectId: publicRuntimeConfig.walletConnectProjectId }),
-        rabbyWallet({ chains }),
-        walletConnectWallet({ chains, projectId: publicRuntimeConfig.walletConnectProjectId }),
+        // rainbowWallet({ chains, projectId: publicRuntimeConfig.walletConnectProjectId }),
+        // rabbyWallet({ chains }),
+        // walletConnectWallet({ chains, projectId: publicRuntimeConfig.walletConnectProjectId }),
         metaMaskWallet({ chains, projectId: publicRuntimeConfig.walletConnectProjectId }),
-        braveWallet({ chains }),
+        // braveWallet({ chains }),
       ],
     },
   ]);

@@ -250,4 +250,36 @@ export default [
     },
     testnet: true,
   },
+  {
+    id: 8598668088,
+    name: 'Swan',
+    network: 'swan-chain',
+    summary: {
+      location: 'Swan Chain',
+      svg: '/icons/eth-summary.svg',
+    },
+    svg: '/icons/swan.png',
+    description: 'Testnet',
+    iconUrl: 'https://swanchain.io/static/img/SWAN_logo_02.94572fa.png',
+    nativeCurrency: {
+      decimals: 18,
+      name: 'Swan Ether',
+      symbol: 'swanETH',
+    },
+    rpcUrls: {
+      default: {
+        http: ['https://rpc.swanchain.dev'],
+      },
+      public: {
+        http: ['https://rpc.swanchain.dev'],
+      },
+    },
+    blockExplorers: {
+      default: {
+        name: 'Blockscout',
+        url: 'https://explorer-testnet.swanchain.io/',
+      },
+    },
+    testnet: true,
+  },
 ] as const satisfies Readonly<(Chain & ChainMetadata)[]>;
