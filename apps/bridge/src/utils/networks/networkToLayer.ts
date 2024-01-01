@@ -6,9 +6,11 @@ const NETWORK_LAYER_MAP: Record<Network, NetworkLayer> = {
   homestead: 'L1',
   goerli: 'L1',
   sepolia: 'L1',
+  mumbai: 'L1',
   base: 'L2',
   'base-goerli': 'L2',
   'base-sepolia': 'L2',
+  'swan-chain': 'L2',
 };
 
 export function networkToLayer(network: Network): NetworkLayer {

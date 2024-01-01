@@ -349,6 +349,32 @@ const assets: Asset[] = [
     decimals: 6,
     protocol: 'CCTP',
   },
+  {
+    L1symbol: 'WETH',
+    L2symbol: 'WETH',
+    L1chainId: 80001,
+    L2chainId: 8598668088,
+    L1contract: '0xa6fa4fb5f76172d178d61b04b0ecd319c5d1c0aa',
+    L2contract: '0x4200000000000000000000000000000000000006',
+    apiId: 'wrapped-eth',
+    L1icon: '/icons/currency/eth.svg',
+    L2icon: '/icons/currency/eth.svg',
+    decimals: 18,
+    protocol: 'OP',
+  },
+  {
+    L1symbol: 'USDC',
+    L2symbol: 'USDC',
+    L1chainId: 80001,
+    L2chainId: 8598668088,
+    L1contract: '0xe6b8a5cf854791412c1f6efc7caf629f5df1c747',
+    L2contract: '0x0c1a5A0Cd0Bb4A9F564f09Cc66f4c921B560371a',
+    apiId: 'usd-coin',
+    L1icon: '/icons/currency/usdc.svg',
+    L2icon: '/icons/currency/usdc.svg',
+    decimals: 6,
+    protocol: 'CCTP',
+  },
 ];
 
 export default assets;

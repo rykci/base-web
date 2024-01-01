@@ -65,8 +65,8 @@ export function WalletModal({ isOpen, displayAddress, address, Close }: WalletMo
   );
 }
 
-const ALL_SUPPORTED_CHAIN_IDS = [1, 5, 11155111, 8453, 84531, 84532];
-const TESTNET_SUPPORTED_CHAIN_IDS = [5, 11155111, 84531, 84532];
+const ALL_SUPPORTED_CHAIN_IDS = [1, 5, 11155111, 8453, 84531, 84532, 8598668088, 80001];
+const TESTNET_SUPPORTED_CHAIN_IDS = [5, 11155111, 84531, 84532, 8598668088, 80001];
 const supportedChains = (
   publicRuntimeConfig.mainnetGALaunchFlag === 'true'
     ? ALL_SUPPORTED_CHAIN_IDS
@@ -198,7 +198,9 @@ export function RainbowConnectButton() {
       currentChain?.id !== 5 &&
       currentChain?.id !== 11155111 &&
       currentChain?.id !== 84531 &&
-      currentChain?.id !== 84532);
+      currentChain?.id !== 84532 &&
+      currentChain?.id !== 80001 &&
+      currentChain?.id !== 8598668088);
 
   return (
     <ConnectButton.Custom>

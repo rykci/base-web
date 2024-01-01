@@ -282,4 +282,37 @@ export default [
     },
     testnet: true,
   },
+  {
+    id: 80001,
+    name: 'Mumbai',
+    network: 'mumbai',
+    summary: {
+      location: 'Polygon Mumbai',
+      svg: '/icons/polygon-matic-logo.svg',
+    },
+    svg: '/icons/polygon-matic-logo.svg',
+    description: 'Testnet',
+    iconUrl:
+      'https://assets-global.website-files.com/637359c81e22b715cec245ad/63dc31f8817a4a509d7635a7_Logo.svg',
+    nativeCurrency: {
+      decimals: 18,
+      name: 'MATIC',
+      symbol: 'MATIC',
+    },
+    rpcUrls: {
+      default: {
+        http: ['https://rpc-mumbai.maticvigil.com'],
+      },
+      public: {
+        http: ['https://rpc-mumbai.maticvigil.com'],
+      },
+    },
+    blockExplorers: {
+      default: {
+        name: 'Etherscan',
+        url: 'https://mumbai.polygonscan.com/',
+      },
+    },
+    testnet: true,
+  },
 ] as const satisfies Readonly<(Chain & ChainMetadata)[]>;

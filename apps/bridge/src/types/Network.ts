@@ -5,4 +5,5 @@ export type Network =
   | 'base'
   | 'base-goerli'
   | 'base-sepolia'
-  | 'swan-chain';
+  | 'swan-chain'
+  | 'mumbai';
