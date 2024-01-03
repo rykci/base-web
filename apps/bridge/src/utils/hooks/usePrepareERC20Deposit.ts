@@ -1,4 +1,4 @@
-import L1StandardBridge from 'apps/bridge/src/contract-abis/L1StandardBridge';
+import L1Bridge from 'apps/bridge/src/contract-abis/L1Bridge';
 import { Asset } from 'apps/bridge/src/types/Asset';
 import { parseUnits } from 'viem';
 import getConfig from 'next/config';
@@ -26,17 +26,14 @@ export function usePrepareERC20Deposit({
       isPermittedToBridge && depositAmount !== ''
         ? publicRuntimeConfig.l1BridgeProxyAddress
         : undefined,
-    abi: L1StandardBridge,
-    functionName: 'depositERC20',
+    abi: L1Bridge,
+    functionName: 'deposit',
     chainId: parseInt(publicRuntimeConfig.l1ChainID),
     args: [
       asset.L1contract as Address,
-      asset.L2contract as Address,
       depositAmount !== ''
         ? parseUnits(depositAmount, asset.decimals)
         : parseUnits('0', asset.decimals),
-      100000,
-      includeTosVersionByte ? publicRuntimeConfig.tosVersion : '0x',
     ],
     cacheTime: 0,
     staleTime: 1,
@@ -51,17 +48,14 @@ export async function prepareERC20Deposit({
 }: UsePrepareERC20DepositProps) {
   return prepareWriteContract({
     address: publicRuntimeConfig.l1BridgeProxyAddress,
-    abi: L1StandardBridge,
-    functionName: 'depositERC20',
+    abi: L1Bridge,
+    functionName: 'deposit',
     chainId: parseInt(publicRuntimeConfig.l1ChainID),
     args: [
       asset.L1contract as Address,
-      asset.L2contract as Address,
       depositAmount !== ''
         ? parseUnits(depositAmount, asset.decimals)
         : parseUnits('0', asset.decimals),
-      100000,
-      includeTosVersionByte ? publicRuntimeConfig.tosVersion : '0x',
     ],
   });
 }
